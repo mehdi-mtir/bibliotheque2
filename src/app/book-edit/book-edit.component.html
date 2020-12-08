@@ -1,0 +1,31 @@
+<h1>Editer un livre</h1>
+<form>
+  <div class="form-group">
+    <label for="iban">IBAN</label>
+    <input type="text" class="form-control" value="" id="iban" #i>
+    <!--
+      Explication du book?book.iban:''
+      if(book != null){
+        value recevra la valeur iban du book
+      }
+      else{
+        value recevra une chaine vide
+      }
+    -->
+  </div>
+  <div class="form-group">
+    <label for="Titre">Titre</label>
+    <input type="text" class="form-control" value="" id="titre" #t>
+  </div>
+  <div class="form-group">
+    <label for="date_publication">Date de publication</label>
+    <input type="date" class="form-control" value="" id="date_publication" #d>
+  </div>
+  <div class="form-group">
+    <label for="prix">Prix</label>
+    <input type="number" class="form-control" value="" id="prix" #p>
+  </div>
+  <div>
+    <input type="button" class="btn btn-primary" value="Editer" >
+  </div>
+</form>
