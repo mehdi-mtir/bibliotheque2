@@ -13,12 +13,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+      <tr *ngFor="let book of books; let indice = index;">
+        <th scope="row">{{indice + 1}}</th>
+        <td>{{book.iban}}</td>
+        <td>{{book.titre | uppercase}}</td>
+        <td>{{book.date_publication | date:"dd/MM/yyyy"}}</td>
+        <td>{{book.prix | monnaie:"£"}}</td>
         <td><input type="button" class="btn btn-info" value="Editer"  > </td>
         <td><input type="button" class="btn btn-danger" value="Supprimer"  > </td>
       </tr>

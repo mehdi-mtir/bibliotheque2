@@ -5,7 +5,7 @@ import { BookEditComponent } from './book-edit/book-edit.component';
 import { BookListComponent } from './book-list/book-list.component';
 
 const routes: Routes = [
-  {path : "books", component: BookListComponent },
+  {path : "books/list", component: BookListComponent },
   {path : "books/add", component:BookAddComponent},
   {path : "books/edit", component:BookEditComponent}
 ];
