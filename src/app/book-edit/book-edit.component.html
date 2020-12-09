@@ -1,8 +1,8 @@
 <h1>Editer un livre</h1>
-<form>
+<form #f="ngForm" (submit)="edit(f)">
   <div class="form-group">
     <label for="iban">IBAN</label>
-    <input type="text" class="form-control" value="" id="iban" #i>
+    <input type="text" class="form-control" [(ngModel)]="book.iban" id="iban" name="iban" ngModel #i>
     <!--
       Explication du book?book.iban:''
       if(book != null){
@@ -15,17 +15,17 @@
   </div>
   <div class="form-group">
     <label for="Titre">Titre</label>
-    <input type="text" class="form-control" value="" id="titre" #t>
+    <input type="text" class="form-control" [(ngModel)]="book.titre" id="titre" name="titre" ngModel #t>
   </div>
   <div class="form-group">
     <label for="date_publication">Date de publication</label>
-    <input type="date" class="form-control" value="" id="date_publication" #d>
+    <input type="date" class="form-control" [(ngModel)]="book.date_publication" id="date_publication" name="date_publication" ngModel #d>
   </div>
   <div class="form-group">
     <label for="prix">Prix</label>
-    <input type="number" class="form-control" value="" id="prix" #p>
+    <input type="number" class="form-control" [(ngModel)]="book.prix" id="prix" name="prix" ngModel #p>
   </div>
   <div>
-    <input type="button" class="btn btn-primary" value="Editer" >
+    <input type="submit" class="btn btn-primary" value="Editer" >
   </div>
 </form>

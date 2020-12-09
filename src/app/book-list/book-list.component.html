@@ -18,9 +18,9 @@
         <td>{{book.iban}}</td>
         <td>{{book.titre | uppercase}}</td>
         <td>{{book.date_publication | date:"dd/MM/yyyy"}}</td>
-        <td>{{book.prix | monnaie:"£"}}</td>
-        <td><input type="button" class="btn btn-info" value="Editer"  > </td>
-        <td><input type="button" class="btn btn-danger" value="Supprimer"  > </td>
+        <td>{{book.prix | monnaie:"€"}}</td>
+        <td><input type="button" class="btn btn-info" value="Editer" (click)="edit(indice)"  > </td>
+        <td><input type="button" class="btn btn-danger" value="Supprimer" (click)="delete(indice)"  > </td>
       </tr>
     </tbody>
   </table>

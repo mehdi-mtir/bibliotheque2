@@ -21,6 +21,10 @@ export class BookService {
     return this.books;
   }
 
+  getBook(indice : number){
+    return this.books[indice];
+  }
+
   addBook(book : Book){
     this.books.push(book);
     console.log(this.books);
